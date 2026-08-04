@@ -285,6 +285,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 005a7fb78194a40e0992986480c830e2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Clase01TouchManager
+  worldCamera: {fileID: 0}
+  touchIndicator: {fileID: 1082257112}
   statusText: {fileID: 1234136705}
 --- !u!4 &401854106
 Transform:
@@ -676,7 +678,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!135 &1082257113
 SphereCollider:
   m_ObjectHideFlags: 0

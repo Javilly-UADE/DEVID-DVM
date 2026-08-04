@@ -7,50 +7,6 @@ using TouchPhase = UnityEngine.InputSystem.TouchPhase;
 
 public class Clase01TouchManager : MonoBehaviour
 {
-    [SerializeField] private TMP_Text statusText;
-
-    private void Awake()
-    {
-        statusText.text = "Esperando touch...";
-    }
-
-    private void OnEnable()
-    {
-        EnhancedTouchSupport.Enable();
-    }
-
-    private void OnDisable()
-    {
-        EnhancedTouchSupport.Disable();
-    }
-
-    private void Update()
-    {
-        if (Touch.activeTouches.Count == 0)
-        {
-            return;
-        }
-
-        Touch touch = Touch.activeTouches[0];
-
-        if (touch.phase == TouchPhase.Began)
-        {
-            statusText.text = "Touch detectado";
-            Debug.Log("Touch detectado");
-        }
-    }
-}
-
-/*
-using TMPro;
-using UnityEngine;
-using UnityEngine.InputSystem.EnhancedTouch;
-
-using Touch = UnityEngine.InputSystem.EnhancedTouch.Touch;
-using TouchPhase = UnityEngine.InputSystem.TouchPhase;
-
-public class Clase01TouchManager : MonoBehaviour
-{
     [SerializeField] private Camera worldCamera;
     [SerializeField] private GameObject touchIndicator;
     [SerializeField] private TMP_Text statusText;
@@ -143,6 +99,3 @@ public class Clase01TouchManager : MonoBehaviour
         return worldPosition;
     }
 }
-*/
-
-
